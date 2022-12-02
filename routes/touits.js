@@ -28,7 +28,6 @@ router.post('/', (req, res) => {
     newTouit.save().then(newData => {
       res.json({ result: true, touit: newData });
     })
-
   })
 });
 
@@ -74,7 +73,7 @@ router.get('/all/:token', (req, res) => {
     }
 
     Touit.find() // Select specific fields to return for security
-      .populate('author', ['userName', 'firstName'])
+      .populate('author', ['userName', 'firstName', 'avatar'])
       .populate('like', ['userName'])
       .sort({ createdAt: 'desc' })
       .then(touit => {
