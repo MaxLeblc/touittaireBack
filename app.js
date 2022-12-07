@@ -17,7 +17,7 @@ const corsWhiteList = [
     "https://touittaire-front.vercel.app/signUp/"
 ]
 const cors = require('cors');
-app.use(cors({ "Access-Control-Allow-Origin": corsWhiteList }));
+app.use(cors({ "Access-Control-Allow-Origin": "*" }));
 
 
 app.use(logger('dev'));
