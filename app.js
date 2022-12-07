@@ -10,8 +10,14 @@ var touitsRouter = require('./routes/touits');
 
 var app = express();
 
+const corsWhiteList = [
+    "https://touittaire-front.vercel.app/",
+    "https://touittaire-front.vercel.app/login/",
+    "https://touittaire-front.vercel.app/signIn/",
+    "https://touittaire-front.vercel.app/signUp/"
+]
 const cors = require('cors');
-app.use(cors({ "Access-Control-Allow-Origin": "https://touittaire-front.vercel.app" }));
+app.use(cors({ "Access-Control-Allow-Origin": corsWhiteList }));
 
 
 app.use(logger('dev'));
