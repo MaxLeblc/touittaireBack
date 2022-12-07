@@ -10,11 +10,8 @@ var touitsRouter = require('./routes/touits');
 
 var app = express();
 
-const cors = require('cors');
-app.use(cors({ 'Access-Control-Allow-Credentials': true }));
-app.use(cors({ "Access-Control-Allow-Origin": "*" }));
-app.use(cors({ 'Access-Control-Allow-Methods': 'GET,OPTIONS,PATCH,DELETE,POST,PUT' }));
-app.use(cors({ 'Access-Control-Allow-Headers': 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version' }));
+// const cors = require('cors');
+// app.use(cors({ "Access-Control-Allow-Origin": "*" }));
 
 app.use(logger('dev'));
 app.use(express.json());
