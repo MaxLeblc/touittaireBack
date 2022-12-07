@@ -11,7 +11,7 @@ var touitsRouter = require('./routes/touits');
 var app = express();
 
 const cors = require('cors');
-app.use(cors({ "Access-Control-Allow-Origin": "https://touittaire-front.vercel.app/login" }));
+app.use(cors({ "Access-Control-Allow-Origin": "https://touittaire-front.vercel.app" }));
 
 
 app.use(logger('dev'));
