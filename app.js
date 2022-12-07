@@ -18,7 +18,6 @@ var app = express();
 // ]
 
 const cors = require('cors');
-app.use(cors({'Access-Control-Allow-Credentials': true}))
 app.use(cors({ "Access-Control-Allow-Origin": corsWhiteList }));
 
 app.use(logger('dev'));
